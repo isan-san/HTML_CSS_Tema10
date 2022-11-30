@@ -1,0 +1,55 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: paleturquoise;
+}
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.5rem;
+  height: 100vh;
+}
+.lateral {
+  min-width: 10%;
+  background-color: bisque;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.lateral button {
+  border-radius: 1rem;
+  border: none;
+  background-color: cornsilk;
+}
+.ppal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: salmon;
+  font-size: 800%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+@media (max-width: 640px) {
+    .app{
+        flex-direction: column-reverse;
+    }
+    .lateral{
+        grid-template-rows: repeat(1, auto);
+        grid-template-columns: repeat(3, auto);
+        min-height: 10%;
+    }
+    .ppal{
+        font-size: 600%;
+    }
+}
